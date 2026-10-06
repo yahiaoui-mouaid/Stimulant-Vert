@@ -1,0 +1,18 @@
+{
+  "note": "Photos used on this demo site, with sources and licenses.",
+  "credits": [
+    { "file": "/images/app-cereals.webp", "title": "Natural Wheat growing in a field", "creator": "Knowles Gallery", "license": "CC BY 2.0", "url": "https://www.flickr.com/photos/36224384@N08/7877089242" },
+    { "file": "/images/app-palm.webp", "title": "Date Plantation", "creator": "Orin Zebest", "license": "CC BY-SA 2.0", "url": "https://www.flickr.com/photos/33917831@N00/170341882" },
+    { "file": "/images/app-olive.webp", "title": "Olive Grove | Crete", "creator": "*Arielle*", "license": "CC BY 2.0", "url": "https://www.flickr.com/photos/33557016@N02/3533475726" },
+    { "file": "/images/app-fruits.webp", "title": "bountiful harvest", "creator": "Muffet", "license": "CC BY 2.0", "url": "https://www.flickr.com/photos/53133240@N00/10068596516" },
+    { "file": "/images/app-greenhouse.webp", "title": "Seedling flower plants in greenhouse interior", "creator": "ProFlowers.com", "license": "CC BY 2.0", "url": "https://www.flickr.com/photos/127365614@N08/16616912968" }
+  ],
+  "unsplash": [
+    { "file": "/images/hero.webp", "source": "Unsplash" },
+    { "file": "/images/about-seedlings.webp", "source": "Unsplash" },
+    { "file": "/images/about-field.webp", "source": "Unsplash" },
+    { "file": "/images/why-field.webp", "source": "Unsplash" },
+    { "file": "/images/app-vegetables.webp", "source": "Unsplash" },
+    { "file": "/images/cta-field.webp", "source": "Unsplash" }
+  ]
+}
