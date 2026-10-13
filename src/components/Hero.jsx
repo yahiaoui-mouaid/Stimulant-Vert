@@ -1,5 +1,4 @@
 import { Leaf, ArrowRight, Phone, Sparkles } from 'lucide-react'
-import Bottle from './Bottle'
 import { BRAND, IMAGES } from '../data/site'
 
 /** Small, tasteful Algerian flag mark (green / white with red crescent & star). */
@@ -92,7 +91,13 @@ export default function Hero() {
           <div className="absolute h-72 w-72 rounded-full bg-leaf-300/25 blur-3xl sm:h-96 sm:w-96" />
           <div className="absolute h-80 w-80 rounded-full border border-mint-200/20 sm:h-[28rem] sm:w-[28rem]" />
           <div className="absolute h-96 w-96 rounded-full border border-mint-200/10 sm:h-[34rem] sm:w-[34rem]" />
-          <Bottle className="relative h-[24rem] w-auto drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] sm:h-[30rem] animate-float-slow" size={1} />
+            <img
+    src={IMAGES.product}
+    alt="Bouteille Stimulant Vert® — fertilisant liquide organique"
+    className="relative h-[24rem] w-auto max-w-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] sm:h-[30rem] animate-float-slow"
+    fetchPriority="high"
+    decoding="async"
+  />
         </div>
       </div>
 

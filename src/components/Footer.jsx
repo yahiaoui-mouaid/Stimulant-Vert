@@ -1,7 +1,5 @@
-import { Leaf, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react'
+import { Leaf, Mail, Phone, ArrowUp } from 'lucide-react'
 import { BRAND, NAV_LINKS, CONTACT } from '../data/site'
-
-const SOCIAL_ICONS = { Facebook, Instagram, Linkedin, Youtube }
 
 export default function Footer() {
   return (
@@ -12,9 +10,8 @@ export default function Footer() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-          {/* Brand */}
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-10">
+          <div>
             <a href="#accueil" className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-leaf-300 to-forest-500 text-forest-950 shadow-lg">
                 <Leaf className="h-6 w-6" strokeWidth={2.2} />
@@ -37,7 +34,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Nav */}
           <nav aria-label="Navigation de pied de page">
             <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
               Navigation
@@ -57,7 +53,6 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Contact */}
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
               Contact
@@ -81,50 +76,21 @@ export default function Footer() {
                   <span>{CONTACT.phoneDisplay}</span>
                 </a>
               </li>
-              <li>
-                <span className="flex items-start gap-3 text-sm text-mint-100/70">
-                  <MapPin className="mt-0.5 h-5 w-5 flex-none text-leaf-300/80" />
-                  <span>{CONTACT.addressLine}</span>
-                </span>
-              </li>
             </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
-              Suivez-nous
-            </h3>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {Object.entries(SOCIAL_ICONS).map(([name, Icon]) => (
-                <a
-                  key={name}
-                  href="#"
-                  aria-label={name}
-                  className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.07] text-mint-100/80 transition-all duration-300 hover:bg-gradient-to-br hover:from-leaf-300 hover:to-forest-500 hover:text-forest-950 hover:-translate-y-1"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-            <a
-              href="#accueil"
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-mint-100/70 transition-colors duration-300 hover:text-white"
-            >
-              <ArrowUp className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1" />
-              Retour en haut
-            </a>
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-sm text-mint-100/60">
             © 2026 Stimulant Vert. Tous droits réservés.
           </p>
-          <p className="text-xs text-mint-100/45">
-            Site de démonstration — contenu statique, sans backend.
-          </p>
+          <a
+            href="#accueil"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-mint-100/60 transition-colors duration-300 hover:text-white"
+          >
+            <ArrowUp className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1" />
+            Retour en haut
+          </a>
         </div>
       </div>
     </footer>

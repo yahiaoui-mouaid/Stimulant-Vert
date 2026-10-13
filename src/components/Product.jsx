@@ -1,6 +1,6 @@
 import { Package, FlaskConical, SprayCan, Pipette, Warehouse, BadgeCheck } from 'lucide-react'
 import Reveal from './Reveal'
-import Bottle from './Bottle'
+import { IMAGES } from '../data/site'
 
 const INFO = [
   {
@@ -69,22 +69,14 @@ export default function Product() {
             <div className="pointer-events-none absolute right-10 bottom-8 h-56 w-56 rounded-full border border-forest-400/20" />
             <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-leaf-300/20 blur-3xl" />
 
-            <div className="relative flex flex-wrap items-end justify-center gap-8 sm:gap-16 lg:gap-24">
-              <div className="flex flex-col items-center">
-                <Bottle className="h-72 w-auto drop-shadow-[0_30px_45px_rgba(12,59,33,0.28)] sm:h-80 animate-float-slow" />
-                <span className="mt-4 rounded-full bg-white px-4 py-1.5 text-xs font-bold text-forest-700 shadow-soft ring-1 ring-mint-100">
-                  Version 1L
-                </span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Bottle
-                  variant="gold"
-                  className="hidden h-72 w-auto drop-shadow-[0_30px_45px_rgba(12,59,33,0.28)] sm:block lg:h-80 animate-float-slower"
-                />
-                <span className="mt-4 hidden rounded-full bg-white px-4 py-1.5 text-xs font-bold text-forest-700 shadow-soft ring-1 ring-mint-100 sm:block">
-                  Édition dorée
-                </span>
-              </div>
+            <div className="relative flex justify-center">
+              <img
+                src={IMAGES.product}
+                alt="Stimulant Vert® — fertilisant liquide organique, format 1L"
+                className="h-auto w-full max-w-md object-contain drop-shadow-[0_30px_45px_rgba(12,59,33,0.28)] sm:max-w-lg lg:max-w-xl animate-float-slow"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             {/* badge */}

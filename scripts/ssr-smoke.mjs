@@ -67,9 +67,8 @@ const expect = [
   ['Better Soil', 'why pillar 1'],
   ['A Greener Tomorrow', 'why pillar 3'],
   ['Contactez-nous', 'contact heading'],
-  ['contact@stimulantvert.dz', 'contact email'],
-  ['+213 XX XX XX XX', 'contact phone placeholder'],
-  ['Algérie', 'contact location'],
+  ['Stimulantvert@gmail.com', 'contact email'],
+  ['0656705865', 'contact phone'],
   ['© 2026 Stimulant Vert. Tous droits réservés.', 'footer copyright'],
 ]
 

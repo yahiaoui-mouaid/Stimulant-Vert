@@ -73,12 +73,5 @@ src/
 Les photographies sont des photos libres de droits (Unsplash et Wikimedia/Flickr, CC).
 Voir `public/images/image-credits.json` pour la liste détaillée et les licences.
 
-## ⚠️ Remarques
-
-- Le numéro de téléphone est volontairement un placeholder : **+213 XX XX XX XX**
-  (non inventé, à confirmer auprès de l'entreprise).
-- Email de démonstration : `contact@stimulantvert.dz`.
-- Les spécifications techniques (dosage, mode d'utilisation) sont reprises telles quelles
-  et restent **à préciser par le client**.
 
 © 2026 Stimulant Vert. Tous droits réservés.
