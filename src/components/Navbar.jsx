@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Leaf, Menu, X, Phone } from 'lucide-react'
 import { BRAND, NAV_LINKS, CONTACT } from '../data/site'
 import { useScrolled, useBodyScrollLock } from '../hooks/useScrollReveal'
+import { Menu, X, Phone } from 'lucide-react'
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -31,15 +32,22 @@ export default function Navbar() {
           className="group flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3 lg:flex-none"
           aria-label={`${BRAND.trademark} — accueil`}
         >
-          <span
-            className={[
-              'flex h-9 w-9 flex-none items-center justify-center rounded-xl shadow-lg transition-all duration-500 sm:h-11 sm:w-11 sm:rounded-2xl',
-              'bg-gradient-to-br from-forest-500 to-forest-800 text-mint-100 group-hover:scale-105 group-hover:rotate-3',
-              scrolled ? 'shadow-forest-800/30' : 'shadow-black/20',
-            ].join(' ')}
-          >
-            <Leaf className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.2} />
-          </span>
+        <span
+          className={[
+            'flex h-9 w-9 flex-none items-center justify-center overflow-hidden rounded-xl transition-all duration-500 sm:h-11 sm:w-11 sm:rounded-2xl',
+            'group-hover:scale-105 group-hover:rotate-3',
+            scrolled ? 'shadow-md shadow-forest-800/20' : 'shadow-md shadow-black/20',
+          ].join(' ')}
+        >
+          <img
+            src="/favicon.png"
+            alt={`${BRAND.name} logo`}
+            className="h-full w-full object-contain"
+            width={44}
+            height={44}
+            decoding="async"
+          />
+        </span>
 
           <span className="flex min-w-0 flex-col leading-tight">
             <span

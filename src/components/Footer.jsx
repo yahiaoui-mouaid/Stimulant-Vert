@@ -13,8 +13,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-10">
           <div>
             <a href="#accueil" className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-leaf-300 to-forest-500 text-forest-950 shadow-lg">
-                <Leaf className="h-6 w-6" strokeWidth={2.2} />
+              <span className="flex h-11 w-11 flex-none items-center justify-center overflow-hidden rounded-2xl shadow-lg">
+                <img
+                  src="/favicon.png"
+                  alt={`${BRAND.name} logo`}
+                  className="h-full w-full object-contain"
+                  width={44}
+                  height={44}
+                  loading="lazy"
+                  decoding="async"
+                />
               </span>
               <span className="flex flex-col leading-tight">
                 <span className="font-display text-lg font-extrabold text-white">
