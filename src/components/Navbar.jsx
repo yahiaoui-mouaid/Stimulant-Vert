@@ -21,32 +21,39 @@ export default function Navbar() {
       ].join(' ')}
     >
       <nav
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-12"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-4 sm:h-20 sm:gap-4 sm:px-8 lg:px-12"
         aria-label="Navigation principale"
       >
-        {/* Logo */}
-        <a href="#accueil" onClick={close} className="group flex items-center gap-3" aria-label={`${BRAND.trademark} — accueil`}>
+        {/* Logo — min-w-0 lets it shrink, flex-none on the icon keeps it square */}
+        <a
+          href="#accueil"
+          onClick={close}
+          className="group flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3 lg:flex-none"
+          aria-label={`${BRAND.trademark} — accueil`}
+        >
           <span
             className={[
-              'flex h-11 w-11 items-center justify-center rounded-2xl shadow-lg transition-all duration-500',
+              'flex h-9 w-9 flex-none items-center justify-center rounded-xl shadow-lg transition-all duration-500 sm:h-11 sm:w-11 sm:rounded-2xl',
               'bg-gradient-to-br from-forest-500 to-forest-800 text-mint-100 group-hover:scale-105 group-hover:rotate-3',
               scrolled ? 'shadow-forest-800/30' : 'shadow-black/20',
             ].join(' ')}
           >
-            <Leaf className="h-6 w-6" strokeWidth={2.2} />
+            <Leaf className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.2} />
           </span>
-          <span className="flex flex-col leading-tight">
+
+          <span className="flex min-w-0 flex-col leading-tight">
             <span
               className={[
-                'font-display text-lg font-extrabold tracking-tight transition-colors duration-500',
+                'truncate font-display text-sm font-extrabold tracking-tight transition-colors duration-500 sm:text-base lg:text-lg',
                 scrolled ? 'text-forest-900' : 'text-white drop-shadow-sm',
               ].join(' ')}
             >
               {BRAND.trademark}
             </span>
+            {/* tagline only shows on ≥sm to avoid wrapping on small phones */}
             <span
               className={[
-                'text-[10px] font-semibold uppercase tracking-[0.22em] transition-colors duration-500',
+                'hidden truncate text-[10px] font-semibold uppercase tracking-[0.18em] transition-colors duration-500 sm:block',
                 scrolled ? 'text-forest-600/80' : 'text-mint-100/90',
               ].join(' ')}
             >
@@ -85,14 +92,14 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle — flex-none so it never gets squeezed off-screen */}
         <button
           type="button"
           onClick={() => setOpen(v => !v)}
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={open}
           className={[
-            'relative z-50 flex h-11 w-11 items-center justify-center rounded-2xl transition-colors duration-300 lg:hidden',
+            'relative z-50 flex h-10 w-10 flex-none items-center justify-center rounded-xl transition-colors duration-300 sm:h-11 sm:w-11 sm:rounded-2xl lg:hidden',
             open || scrolled ? 'bg-forest-800/10 text-forest-800' : 'bg-white/15 text-white backdrop-blur-md',
           ].join(' ')}
         >
@@ -122,7 +129,7 @@ export default function Navbar() {
         />
         <div
           className={[
-            'absolute right-0 top-0 h-full w-[82%] max-w-sm overflow-y-auto px-6 pb-10 pt-24',
+            'absolute right-0 top-0 h-full w-[85%] max-w-sm overflow-y-auto px-6 pb-10 pt-20',
             'bg-gradient-to-b from-forest-900 to-forest-950 shadow-2xl',
             'transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
             open ? 'translate-x-0' : 'translate-x-full',
